@@ -29,13 +29,13 @@ export default function About() {
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
         <div className="max-w-2xl mb-16">
-          <span className="text-primary font-semibold text-sm md:text-base tracking-wide block mb-3">
+          <span className="font-semibold text-sm md:text-base tracking-wide block mb-3" style={{ color: '#3C3489' }}>
             WHO WE ARE
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#1a1a1a' }}>
             Our Mission & Values
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg leading-relaxed" style={{ color: '#666' }}>
             Project Daan is an NGO founded on the principle that every individual deserves access to opportunities for growth, education, and dignified living. We work across multiple sectors to create systemic change.
           </p>
         </div>
@@ -45,13 +45,14 @@ export default function About() {
           {values.map((value, index) => (
             <div
               key={index}
-              className="p-8 rounded-lg bg-accent hover:shadow-lg transition-all duration-300"
+              className="p-8 rounded-lg hover:shadow-lg transition-all duration-300"
+              style={{ backgroundColor: '#E6F1FB', border: '1px solid #e5e5e5' }}
             >
               <div className="text-4xl mb-4">{value.icon}</div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#1a1a1a' }}>
                 {value.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed" style={{ color: '#666' }}>
                 {value.description}
               </p>
             </div>
@@ -59,20 +60,20 @@ export default function About() {
         </div>
 
         {/* About Content */}
-        <div className="bg-muted rounded-lg p-8 md:p-12">
-          <h3 className="text-2xl font-bold text-foreground mb-6">
+        <div className="rounded-lg p-8 md:p-12" style={{ backgroundColor: '#f5f4f0' }}>
+          <h3 className="text-2xl font-bold mb-6" style={{ color: '#1a1a1a' }}>
             Making a Difference Every Day
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="text-lg font-semibold text-primary mb-4">Our Approach</h4>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: '#3C3489' }}>Our Approach</h4>
+              <p className="leading-relaxed mb-4" style={{ color: '#666' }}>
                 We combine grassroots engagement with strategic partnerships to ensure our programs reach those who need them most. Our team of dedicated professionals and volunteers work tirelessly to create sustainable solutions.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-primary mb-4">Our Impact</h4>
-              <p className="text-gray-600 leading-relaxed mb-4">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: '#3C3489' }}>Our Impact</h4>
+              <p className="leading-relaxed mb-4" style={{ color: '#666' }}>
                 From education and healthcare to skill development and community infrastructure, Project Daan addresses multiple dimensions of human development. Every initiative is designed with long-term sustainability in mind.
               </p>
             </div>

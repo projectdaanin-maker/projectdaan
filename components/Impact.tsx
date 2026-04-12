@@ -41,17 +41,17 @@ export default function Impact() {
   ]
 
   return (
-    <section id="impact" className="py-16 md:py-24 bg-accent">
+    <section id="impact" className="py-16 md:py-24" style={{ backgroundColor: '#f5f4f0' }}>
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
         <div className="max-w-2xl mb-16">
-          <span className="text-primary font-semibold text-sm md:text-base tracking-wide block mb-3">
+          <span className="font-semibold text-sm md:text-base tracking-wide block mb-3" style={{ color: '#3C3489' }}>
             OUR INITIATIVES
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#1a1a1a' }}>
             Programs Creating Change
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg leading-relaxed" style={{ color: '#666' }}>
             Through diverse initiatives, we address the multifaceted challenges facing communities. Each program is designed to create sustainable, measurable impact.
           </p>
         </div>
@@ -61,17 +61,18 @@ export default function Impact() {
           {programs.map((program, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-8 hover:shadow-lg transition-all duration-300 border border-gray-200"
+              className="bg-white rounded-lg p-8 hover:shadow-lg transition-all duration-300"
+              style={{ border: '1px solid #e5e5e5' }}
             >
               <div className="text-5xl mb-4">{program.icon}</div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#1a1a1a' }}>
                 {program.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="leading-relaxed mb-6" style={{ color: '#666' }}>
                 {program.description}
               </p>
-              <div className="pt-4 border-t border-gray-200">
-                <p className="text-primary font-semibold text-sm">
+              <div className="pt-4" style={{ borderTop: '1px solid #e5e5e5' }}>
+                <p className="font-semibold text-sm" style={{ color: '#3C3489' }}>
                   {program.impact}
                 </p>
               </div>

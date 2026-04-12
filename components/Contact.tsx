@@ -28,47 +28,47 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-accent">
+    <section id="contact" className="py-16 md:py-24" style={{ backgroundColor: '#f5f4f0' }}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-primary font-semibold text-sm md:text-base tracking-wide block mb-3">
+            <span className="font-semibold text-sm md:text-base tracking-wide block mb-3" style={{ color: '#3C3489' }}>
               GET IN TOUCH
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#1a1a1a' }}>
               Contact Project Daan
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg" style={{ color: '#666' }}>
               Have questions? We&apos;d love to hear from you. Reach out and let&apos;s start a conversation.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Contact Info Cards */}
-            <div className="bg-white rounded-lg p-8 text-center">
+            <div className="bg-white rounded-lg p-8 text-center" style={{ border: '1px solid #e5e5e5' }}>
               <div className="text-4xl mb-4">📍</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Address</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#1a1a1a' }}>Address</h3>
+              <p style={{ color: '#666' }}>
                 123 Community Street<br />
                 City, State 12345<br />
                 India
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 text-center">
+            <div className="bg-white rounded-lg p-8 text-center" style={{ border: '1px solid #e5e5e5' }}>
               <div className="text-4xl mb-4">📞</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Phone</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#1a1a1a' }}>Phone</h3>
+              <p style={{ color: '#666' }}>
                 +91 (555) 000-0000<br />
                 Available: Mon-Fri, 9AM-6PM<br />
                 IST
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 text-center">
+            <div className="bg-white rounded-lg p-8 text-center" style={{ border: '1px solid #e5e5e5' }}>
               <div className="text-4xl mb-4">✉️</div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Email</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#1a1a1a' }}>Email</h3>
+              <p style={{ color: '#666' }}>
                 hello@projectdaan.org<br />
                 volunteer@projectdaan.org<br />
                 info@projectdaan.org
@@ -77,12 +77,12 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-lg p-8 md:p-12">
+          <div className="bg-white rounded-lg p-8 md:p-12" style={{ border: '1px solid #e5e5e5' }}>
             {isSubmitted ? (
               <div className="text-center py-12">
-                <div className="text-5xl mb-4">✓</div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">Message Sent!</h3>
-                <p className="text-gray-600">
+                <div className="text-5xl mb-4" style={{ color: '#0F6E56' }}>✓</div>
+                <h3 className="text-2xl font-bold mb-2" style={{ color: '#1a1a1a' }}>Message Sent!</h3>
+                <p style={{ color: '#666' }}>
                   Thank you for reaching out. We&apos;ll get back to you as soon as possible.
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
+                    <label htmlFor="name" className="block text-sm font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                       Full Name *
                     </label>
                     <input
@@ -100,12 +100,13 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20"
+                      className="w-full px-4 py-3 rounded-lg border"
+                      style={{ borderColor: '#ddd' }}
                       placeholder="Your Name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
+                    <label htmlFor="email" className="block text-sm font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                       Email Address *
                     </label>
                     <input
@@ -115,14 +116,15 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20"
+                      className="w-full px-4 py-3 rounded-lg border"
+                      style={{ borderColor: '#ddd' }}
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-foreground mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                     Subject *
                   </label>
                   <input
@@ -132,13 +134,14 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20"
+                    className="w-full px-4 py-3 rounded-lg border"
+                    style={{ borderColor: '#ddd' }}
                     placeholder="How can we help?"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold mb-2" style={{ color: '#1a1a1a' }}>
                     Message *
                   </label>
                   <textarea
@@ -148,14 +151,16 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 resize-none"
+                    className="w-full px-4 py-3 rounded-lg border resize-none"
+                    style={{ borderColor: '#ddd' }}
                     placeholder="Tell us more about your inquiry..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
+                  className="w-full text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all"
+                  style={{ backgroundColor: '#3C3489' }}
                 >
                   Send Message
                 </button>
